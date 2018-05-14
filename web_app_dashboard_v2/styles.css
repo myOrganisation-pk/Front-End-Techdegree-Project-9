@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+/*---- Header ----*/
+
+html {
+	height: 100%;
+}
+
+#container {
+	height: 100%;
+	max-width: 1200px;
+}
+
+.main-header{
+	background: #755AAF;
+	overflow: hidden;
+	padding: 5px 10px;
+	z-index: 2;
+	position: absolute;
+	width: 100%;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.header-your,
+.header-app {
+	color: #fff;
+	float: left;
+	padding: 15px 0px 10px 0px;
+	text-align: center;
+	z-index: 2;
+}
+
+.header-app {
+	font-family: 'Poiret One', sans-serif;
+}
+
+.tm-header {
+	font-size: 8px;
+}
+
+.header-avatar {
+	float: right;
+	padding: 10px;
+	width: 130px;
+	border-left: 2px solid #3e4374;
+}
+
+.name-header {
+	float: right;
+	padding-top: 7px;
+	color: #fff;
+	font-size: 12px;
+	font-family: 'Poiret One', sans-serif;
+}
+
+.bell-container {
+	width: 50px;
+	height: 50px;
+	float: right;
+	text-align: center;
+}
+
+.profile-image {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border-right: 5px;
+	padding-top: 2px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+/*---- Navigation ----*/
+
+.sidebar {
+	display: inline-block;
+	width: 70px;
+	background: #535997;
+	position: absolute;
+	overflow: auto;
+	height: 100%;
+}
+
+.nav-svg {
+	margin-top: 80px;
+	position: absolute;
+
+}
+
+.nav-icon {
+	padding: 20px 10px;
+	width: 70px;
+	height: 70px;
+}
+
+.nav-icon path {
+	fill: #C7C2C2;
+}
+
+/*---- Header Icons ----*/
+
+.bell {
+	width: 17px;
+	height: 17px;
+	margin-top: 16px;
+}
+
+.circle {
+	border-radius: 50%;
+	width:5px;
+	height:5px;
+	float: right;
+	margin-top: 10px;
+	margin-right: 25px;
+	background-color: #61ED66;
+}
+
+/*---- Traffic Dashboard ----*/
+
+fieldset {
+  position: relative;
+  float: right;
+  width: 50%;
+  top: 65px;
+  right: 20px;
+}
+
+#name {
+  float: right;
+  width: 300px;
+}
+
+.dashboard {
+  font-family: 'Roboto', sans-serif;
+}
+
+.dashboard-text {
+  color: grey;
+  text-align: left;
+  max-width: 97%;
+  height: 30px;
+  margin: 0 auto;
+  border-radius: 5px;
+  line-height: 10px;
+}
+
+.alert {
+  border: 1px solid #3e4374;
+  text-align: left;
+  background-color: #755AAF;
+  color: #fff;
+  max-width: 97%;
+  height: 30px;
+  margin: 0 auto;
+  border-radius: 5px;
+  line-height: 30px;
+}
+
+.text-alert {
+  padding-left: 5px;
+}
+
+.text-welcome {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.closebtn {
+  float: right;
+  padding-right: 5px;
+}
+
+/*---- Traffic Dashboard Chart ----*/
+
+.container-traffic {
+  max-width: 100%;
+  margin-left: 70px;
+  margin-top: 80px;
+}
+
+#lineChart {
+  border-bottom: 1px solid lightgrey;
+  margin-right: 0px;
+  padding-bottom: 10px;
+}
+
+.dashboard-nav ul {
+  list-style-type: none;
+  float: right;
+  padding-right: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.dashboard-nav a {
+   padding: 10px;
+   font-family: 'Poiret One', sans-serif;
+   text-decoration: none;
+}
+
+.dashboard-nav a:hover {
+  cursor: pointer;
+  background-color: #42E043;
+  border-radius: 25%;
+}
+
+/*---- DAILY TRAFFIC CHART ----*/
+
+.container-daily {
+	max-width: 100%;
+	margin-left: 70px;
+	justify-content: center;
+	border-bottom: 1px solid lightgrey;
+}
+
+/*---- MOBILE CHART ----*/
+
+.container-mobile {
+	max-width: 100%;
+
+	justify-content: center;
+	border-bottom: 1px solid lightgrey;
+}
+
+.container-flex {
+  margin-right: 0px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+/*---- SOCIAL STATS ----*/
+
+.container-social {
+	max-width: 100%;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.twitter-container {
+	margin-left: 70px;
+	width: 30%;
+	height: 30%;
+	border: 1px solid lightgrey;
+}
+
+.twitter-svg {
+	width: 30px;
+	height: 30px;
+
+
+	fill: #fff;
+}
+
+.twitter-circle {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-color: #535997;
+}
+
+ /*---- Media ----*/
+
+ @media (min-width: 768px) {
+	.container-daily {
+		width: 50%;
+		border-bottom: none;
+	}
+	.container-mobile {
+		width: 50%;
+		border-left: 1px solid lightgrey;
+		border-bottom: none;
+	}
+	.container-flex {
+		display: flex;
+		flex-direction: row;
+		border-bottom: 1px solid lightgrey;
+	}
+ }
+
+
