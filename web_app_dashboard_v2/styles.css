@@ -4,12 +4,10 @@
 
 /*---- Header ----*/
 
-html {
-	height: 100%;
-}
 
-#container {
-	height: 100%;
+
+.main-wrapper {
+	display: flex;
 	max-width: 1200px;
 }
 
@@ -18,7 +16,7 @@ html {
 	overflow: hidden;
 	padding: 5px 10px;
 	z-index: 2;
-	position: absolute;
+	position: ;
 	width: 100%;
 }
 
@@ -82,28 +80,26 @@ body {
 /*---- Navigation ----*/
 
 .sidebar {
-	display: inline-block;
 	width: 70px;
 	background: #535997;
-	position: absolute;
-	overflow: auto;
-	height: 100%;
 }
 
-.nav-svg {
+nav {
 	margin-top: 80px;
-	position: absolute;
-
+	display: flex;
+	flex-direction: column;
 }
 
-.nav-icon {
-	padding: 20px 10px;
+nav a {
 	width: 70px;
 	height: 70px;
 }
 
-.nav-icon path {
-	fill: #C7C2C2;
+nav img {
+	margin-left: 10px;
+	width: 30px;
+	height: 30px;
+	color: #C7C2C2;
 }
 
 /*---- Header Icons ----*/
@@ -485,29 +481,20 @@ h3 {
 	border: 1px solid lightgrey;
 }
 
-fieldset {
-  margin-bottom: 30px;
-  border: none;
-}
+span {
+	float: left;
 
+}
 form {
-  max-width: 400px;
-  margin: 10px auto;
-  padding: 10px 20px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0px;
   background: #f4f7f8;
   border-radius: 8px;
 }
 
-span {
-	float: left;
-}
-
-legend {
-  font-size: .8em;
-  margin-bottom: 10px;
-}
-
 input[type="text"],
+input[type="search"],
 textarea {
   background: rgba(255,255,255,0.1);
   border: none;
@@ -520,7 +507,33 @@ textarea {
   background-color: #e8eeef;
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   margin-bottom: 10px;
+  opacity: 1;
+  transition: 1s;
+}
+
+fieldset {
+  margin-bottom: ;
+  border: none;
+}
+
+.textarea {
+	max-width: 100%;
 }
 
 /*---- Media ----*/
@@ -574,6 +587,9 @@ textarea {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+	}
+	textarea {
+		resize: none;
 	}
 }
 	
