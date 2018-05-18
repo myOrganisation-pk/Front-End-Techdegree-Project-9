@@ -26,6 +26,9 @@ let lineChart = new Chart(lChart, {
       }]
   },
   options: {
+    legend: {
+      display: false
+    },
     scales: {
       xAxes: [{
         gridLines: {
@@ -78,6 +81,9 @@ let barChart = new Chart(bChart, {
       }]
   },
   options: {
+    legend: {
+      display: false
+    },
     scales: {
       xAxes: [{
         gridLines: {
@@ -125,6 +131,21 @@ let doughnutChart = new Chart(dChart, {
         borderWidth: 1
       }]
   },
+  options: {
+    layout: {
+      padding: {
+        right: 20,
+        top: 0
+      }
+    },
+    legend: {
+      display: true,
+      position: 'right',
+      labels: {
+        boxWidth: 15
+      }
+    }
+  }
 });
 
 

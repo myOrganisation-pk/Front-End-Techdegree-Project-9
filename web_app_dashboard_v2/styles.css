@@ -4,11 +4,14 @@
 
 /*---- Header ----*/
 
-
-
 .main-wrapper {
 	display: flex;
-	max-width: 1200px;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
 }
 
 .main-header{
@@ -53,7 +56,8 @@
 	padding-top: 7px;
 	color: #fff;
 	font-size: 12px;
-	font-family: 'Poiret One', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
 }
 
 .bell-container {
@@ -77,29 +81,22 @@ body {
 	height: 100%;
 }
 
-/*---- Navigation ----*/
+/*---- Sidebar Navigation ----*/
 
 .sidebar {
-	width: 70px;
 	background: #535997;
 }
 
-nav {
-	margin-top: 80px;
-	display: flex;
-	flex-direction: column;
-}
-
-nav a {
-	width: 70px;
-	height: 70px;
+.nav-sidebar {
+	width: 60px;
+	margin-top: 20px;
+	margin-left: 15px;
 }
 
 nav img {
-	margin-left: 10px;
-	width: 30px;
-	height: 30px;
-	color: #C7C2C2;
+	margin: 0 10px 25px 10px;
+	width: 25px;
+	height: 25px;
 }
 
 /*---- Header Icons ----*/
@@ -120,41 +117,50 @@ nav img {
 	background-color: #61ED66;
 }
 
-/*---- Traffic Dashboard ----*/
 
-fieldset {
-
-}
-
-#name {
-  float: right;
-  width: 300px;
-}
-
+/*---- Dashboard Navigation ----*/
 .dashboard {
-  font-family: 'Roboto', sans-serif;
+	float: left;
+	margin: 10px 10px 0 10px;
+	font-size: .8em;
+	color: grey;
 }
 
-.dashboard-text {
-  color: grey;
-  text-align: left;
-  max-width: 97%;
-  height: 30px;
-  margin: 0 auto;
-  border-radius: 5px;
-  line-height: 10px;
+h2 {
+	margin: 0 auto;
+}
+
+.dashboard-nav {
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+form {
+	float: right;
+	height: 50px;
+	width: 83%;
+  padding: 10px 0px 10px 20px;
+	background: #f4f7f8;
+	border-bottom: 1px solid lightgrey;
+	border-left: 1px solid lightgrey;
+}
+#search-nav {
+	float: right;
+	margin-right: 20px;
 }
 
 .alert {
   border: 1px solid #3e4374;
-  text-align: left;
+	margin-left: 20px;
+	margin-right: 10px;
   background-color: #755AAF;
   color: #fff;
   max-width: 97%;
   height: 30px;
-  margin: 0 auto;
   border-radius: 5px;
-  line-height: 30px;
+	line-height: 30px;
 }
 
 .text-alert {
@@ -174,26 +180,35 @@ fieldset {
 
 /*---- Traffic Dashboard Chart ----*/
 
-.container-traffic {
+.traffic-container {
   max-width: 100%;
-  margin-left: 70px;
-  margin-top: 80px;
+  margin-left: 15px;
+}
+
+.chart-title {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	float: left;
+	font-size: .5em;
+	color: grey;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #lineChart {
   border-bottom: 1px solid lightgrey;
   margin-right: 0px;
-  padding-bottom: 10px;
+	padding-bottom: 10px;
+	margin-left: 10px;
 }
 
-.dashboard-nav ul {
+.traffic-container ul {
   list-style-type: none;
   float: right;
   padding-right: 5px;
-  
 }
 
-.dashboard-nav a {
+.traffic-container a {
 	font-size: 15px;
   padding: 10px;
 	font-family: 'Open Sans', sans-serif;
@@ -201,7 +216,7 @@ fieldset {
 	color: darkgrey;
 }
 
-.dashboard-nav a:hover {
+.traffic-container a:hover {
   cursor: pointer;
   background-color: #42E043;
   border-radius: 25%;
@@ -211,7 +226,7 @@ fieldset {
 
 .container-daily {
 	max-width: 100%;
-	margin-left: 70px;
+	margin-left: 10px;
 	justify-content: center;
 	border-bottom: 1px solid lightgrey;
 }
@@ -234,7 +249,7 @@ fieldset {
 
 .container-social {
 	max-width: 100%;
-	margin-right: 0 auto;
+	align-items: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -242,7 +257,7 @@ fieldset {
 }
 
 .twitter-container {
-	margin-left: 80px;
+	margin-left: 10px;
 	width: 250px;
 	height: 100px;
 	border: 1px solid lightgrey;
@@ -295,7 +310,7 @@ h3 {
 }
 
 .facebook-container {
-	margin-left: 80px;
+	margin-left: 10px;
 	width: 250px;
 	height: 100px;
 	border: 1px solid lightgrey;
@@ -345,14 +360,13 @@ h3 {
 }
 
 .google-container {
-	margin-left: 80px;
+	margin-left: 10px;
 	width: 250px;
 	height: 100px;
 	border: 1px solid lightgrey;
 	align-items: center;
 	background-color: #EDEDED;
 	margin-bottom: 10px;
-	margin-right: 10px;
 }
 
 .google-graphics-container {
@@ -382,7 +396,8 @@ h3 {
 	padding-right: 50px;
 }
 
-h3 {
+#members-header {
+	float: left;
 	font-size: .8em;
 	margin: 0 auto;
 	margin-top: 30px;
@@ -405,35 +420,36 @@ h3 {
 	border-right: 1px solid lightgrey;
 	border-bottom: 1px solid lightgrey;
 	font-weight: lighter;
-	margin-left: 70px;
+	margin-left: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .recent-activity {
 	max-width: 100%;
-	margin-left: 70px;
+	margin-left: 10px;
 	border-right: 1px solid lightgrey;
 	border-bottom: 1px solid lightgrey;
 	font-weight: lighter;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	font-family: 'Roboto', sans-serif;
+	
 }
 
 .member-profile {
-	margin: 0 20px 10px 20px;
+	margin: 0 20px 10px 0;
 	display: flex;
 	flex-direction: row;
 	border-bottom: 1px solid lightgrey;
+	font-family: 'Roboto', sans-serif;
 }
 
 .member-last-profile {
 	float: left;
-	margin: 0 20px 10px 20px;
+	margin: 0 20px 10px 0;
 	display: flex;
 	flex-direction: row;
 	border-bottom: none;
@@ -474,40 +490,11 @@ h3 {
 
 .message {
 	max-width: 50%;
-	margin-left: 70px;
+	margin-left: 10px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: lighter;
 	font-size: .8em;
 	border: 1px solid lightgrey;
-}
-
-span {
-	float: left;
-
-}
-form {
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 0px;
-  background: #f4f7f8;
-  border-radius: 8px;
-}
-
-input[type="text"],
-input[type="search"],
-textarea {
-  background: rgba(255,255,255,0.1);
-  border: none;
-  font-size: 16px;
-  height: auto;
-  margin: 0;
-  outline: 0;
-  padding: 15px;
-  width: 100%;
-  background-color: #e8eeef;
-  color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 30px;
 }
 
 button {
@@ -560,19 +547,28 @@ fieldset {
 		flex-direction: row;
 		justify-content: space-between;
 	}
+	.google-container {
+		margin: 0 10px 10px 10px;
+		width: 250px;
+		height: 100px;
+		border: 1px solid lightgrey;
+		align-items: center;
+		background-color: #EDEDED;
+	}
 	.new-members {
-		max-width: 100%;
+		max-width: 50%;
 		border-right: 1px solid lightgrey;
 		border-bottom: 1px solid lightgrey;
 		font-weight: lighter;
 		margin-right: 0 auto;
-		margin-left: 70px;
+		margin-left: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		font-family: 'Open Sans', sans-serif;
 	}
 	.recent-activity {
+		max-width: 50%;
 		font-weight: lighter;
 		margin-left: 0;
 		display: flex;
@@ -586,7 +582,7 @@ fieldset {
 		border-bottom: 1px solid lightgrey;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 	textarea {
 		resize: none;
