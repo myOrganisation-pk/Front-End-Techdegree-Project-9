@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700,300' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
@@ -68,7 +69,7 @@
           <h2>Dashboard</h2>
         </div>
 
-        <form id='searchbox' action=''>
+        <form id='searchbox-form' action=''>
           <input id='search-nav' required type='text' placeholder='Search' results='0'>
         </form>
       </div>
@@ -89,7 +90,9 @@
             <a href='#'>Monthly</a>
             <li>
         </ul>
-        <div class='chart-title'><h2>TRAFFIC</h2></div>
+        <div class='chart-title'>
+          <h2>TRAFFIC</h2>
+        </div>
         <canvas id="lineChart" height: '400' width: '400'></canvas>
       </div>
 
@@ -97,13 +100,17 @@
       <div class='container-flex'>
         <!- Daily Traffic container ->
         <div class='container-daily'>
-          <div class='chart-title'><h2>DAILY TRAFFIC</h2></div>
+          <div class='chart-title'>
+            <h2>DAILY TRAFFIC</h2>
+          </div>
           <canvas id="barChart"></canvas>
         </div>
 
         <!- Mobile container ->
         <div class='container-mobile'>
-          <div class='chart-title'><h2>MOBILE USERS</h2></div>
+          <div class='chart-title'>
+            <h2>MOBILE USERS</h2>
+          </div>
           <canvas id='doughnutChart'></canvas>
         </div>
 
@@ -165,40 +172,47 @@
         <!- New members container ->
         <div class='new-members'>
           <h3 id='members-text'>NEW MEMBERS</h3>
-          <div class='member-profile clearfix'>
-            <img class='pic' src='https://randomuser.me/api/portraits/women/82.jpg'>
+
+          <div class='member-div'>
             <div class='profile-info'>
-              <p class='name'>Victoria Chambers</p>
-              <a class='email' href='victoria.chambers@example.com'>victoria.chambers@example.com</a>
+              <img class='pic' src='https://randomuser.me/api/portraits/women/82.jpg'>
+              <div class='contact-info'>
+                <p class='name'>Victoria Chambers</p>
+                <a class='email' href='victoria.chambers@example.com'>victoria.chambers@example.com</a>
+              </div>
             </div>
             <p class='date'>10/15/2015</p>
           </div>
 
-
-          <div class='member-profile clearfix'>
-            <img class='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
+          <div class='member-div'>
             <div class='profile-info'>
-              <p class='name'>Dale Byrd</p>
-              <a class='email' href='dale.byrd52@example.com>'>dale.byrd52@example.com</a>
+              <img class='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
+              <div class='contact-info'>
+                <p class='name'>Dale Byrd</p>
+                <a class='email' href='dale.byrd52@example.com>'>dale.byrd52@example.com</a>
+              </div>
             </div>
             <p class='date'>10/15/2015</p>
           </div>
 
-
-          <div class='member-profile clearfix'>
-            <img class='pic' src='https://randomuser.me/api/portraits/women/60.jpg'>
+          <div class='member-div'>
             <div class='profile-info'>
-              <p class='name'>Dawn Wood</p>
-              <a class='email' href='dawn.wood16@example.com>'>dawn.wood@example.com</a>
+              <img class='pic' src='https://randomuser.me/api/portraits/women/60.jpg'>
+              <div class='contact-info'>
+                <p class='name'>Dawn Wood</p>
+                <a class='email' href='dawn.wood16@example.com>'>dawn.wood@example.com</a>
+              </div>
             </div>
             <p class='date'>10/15/2015</p>
           </div>
 
-          <div class='member-last-profile clearfix'>
-            <img class='pic' src='https://randomuser.me/api/portraits/men/25.jpg'>
+          <div class='member-div-last'>
             <div class='profile-info'>
-              <p class='name'>Dan Oliver</p>
-              <a class='email' href='dan.oliver82@example.com>'>dan.oliver82@example.com</a>
+              <img class='pic' src='https://randomuser.me/api/portraits/men/25.jpg'>
+              <div class='contact-info'>
+                <p class='name'>Dan Oliver</p>
+                <a class='email' href='dan.oliver82@example.com>'>dan.oliver82@example.com</a>
+              </div>
             </div>
             <p class='date'>10/15/2015</p>
           </div>
@@ -208,72 +222,86 @@
         <!- Recent activity container ->
         <div class='recent-activity'>
           <h3 id='activity-text'>RECENT ACTIVITY</h3>
-          <div class='member-profile clearfix'>
-            <img class='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
+
+          <div class='activity-div'>
             <div class='profile-info'>
-              <p class='name'>Victoria Chambers commented on YourApp's SEO Tips</p>
-              <p class='time'>4 hours ago</p>
+              <img class='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
+              <div class='contact-info'>
+                <p class='comment'>Victoria Chambers commented on YourApp's SEO Tips</p>
+                <p class='time'>4 hours ago</p>
+              </div>
             </div>
+            <img class='chevron' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
+            />
           </div>
 
-          <div class='member-profile clearfix'>
-            <img class='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
+          <div class='activity-div'>
             <div class='profile-info'>
-              <p class='name'>Dale Byrd like the post Facebook's Changes for 2016</p>
-              <p class='time'>5 hours ago</p>
+              <img class='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
+              <div class='contact-info'>
+                <p class='comment'>Dale Byrd like the post Facebook's Changes for 2016</p>
+                <p class='time'>5 hours ago</p>
+              </div>
             </div>
+            <img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
+            />
           </div>
 
-          <div class='member-profile clearfix'>
-            <img class='pic' src='https://randomuser.me/api/portraits/women/60.jpg'>
+          <div class='activity-div'>
             <div class='profile-info'>
-              <p class='name'>Dawn Wood commented on Facebooks Changes for 2016</p>
-              <p class='time'>5 hours ago</p>
+              <img class='pic' src='https://randomuser.me/api/portraits/women/60.jpg'>
+              <div class='contact-info'>
+                <p class='comment'>Dawn Wood commented on Facebook's Changes for 2016</p>
+                <p class='time'>5 hours ago</p>
+              </div>
             </div>
+            <img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
+            />
           </div>
 
-          <div class='member-last-profile clearfix'>
-            <img class='pic' src='https://randomuser.me/api/portraits/men/25.jpg'>
+          <div class='activity-div-last'>
             <div class='profile-info'>
-              <p class='name'>Dan Oliver posted YourApp's SEO Tips</p>
-              <p class='time'>1 day ago</p>
+              <img class='pic' src='https://randomuser.me/api/portraits/men/25.jpg'>
+              <div class='contact-info'>
+                <p class='comment'>Dan Oliver posted YourApp's SEO Tips</p>
+                <p class='time'>1 day ago</p>
+              </div>
             </div>
+            <img src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
+            />
           </div>
         </div>
+        <!- End of members flex container ->
       </div>
-      <!- End of members flex container ->
 
       <!- Message user container form ->
-      <div class='message'>
-        <form id='contact' action='index.html' method='post'>
-          <fieldset>
-            <legend>
-              <span>MESSAGE USER</span>
-            </legend>
+      <div class='message-div'>
+        <form id='message-form' action='index.html' method='post'>
+          <h3 class='message-user'>MESSAGE USER</h3>
             <div class='search-container'>
               <input required type='text' id='name' name='user_name' placeholder='Search for user'>
             </div>
             <div class='textarea'>
               <textarea id='other' name='user-bio'></textarea>
             </div>
-          </fieldset>
+     
         </form>
       </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-    <!- End of main-content div ->
-
-
-
-
-
-
-
-
-
-
-  </div>
-  <!- End of main wrapper ->
+    <!- End of main wrapper ->
 
 
 
@@ -287,8 +315,8 @@
 
 
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script>
-  <script src='app.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script>
+    <script src='app.js'></script>
 
 </body>
 
