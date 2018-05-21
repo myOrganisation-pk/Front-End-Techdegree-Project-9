@@ -19,7 +19,6 @@
 	overflow: hidden;
 	padding: 5px 10px;
 	z-index: 2;
-	position: ;
 	width: 100%;
 }
 
@@ -280,7 +279,7 @@ h2 {
 .twitter-svg-container {
 	width: 60px;
 	height: 60px;
-	background-color: #535997;
+	background-color: #755AAF;
 	border-radius: 50%;
 }
 
@@ -333,7 +332,7 @@ h3 {
 .facebook-svg-container {
 	width: 60px;
 	height: 60px;
-	background-color: #535997;
+	background-color: #755AAF;
 	border-radius: 50%;
 }
 
@@ -376,7 +375,7 @@ h3 {
 .google-svg-container {
 	width: 60px;
 	height: 60px;
-	background-color: #535997;
+	background-color: #755AAF;
 	border-radius: 50%;
 }
 
@@ -470,6 +469,7 @@ h3 {
 
 .contact-info {
 	padding-top: 5px;
+
 }
 
 .pic {
@@ -485,7 +485,7 @@ h3 {
 	text-align: left;
 	font-weight: lighter;
 	font-size: .8em;
-	color: #535997;
+	color: #755AAF;
 }
 
 .date {
@@ -505,7 +505,7 @@ h3 {
 	text-decoration: none;
 	font-family: 'Montserrat', sans-serif;
 	font-size: .8em;
-	color: #535997;
+	color: #755AAF;
 }
 
 .comment {
@@ -527,36 +527,55 @@ img .chevron {
 	fill: #535997; 
 }
 
-/*---- Search ----*/
-#message-form {
-	height: 300px;
+/*---- Message Search Form ----*/
 
-	background: #f4f7f8;
-	border-right: 1px solid lightgrey;
+.message-settings-flex {
+	display: flex;
+	flex-direction: column;
 }
 
 .message-div {
-	max-width: 100%;	
+	width: 100%;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: lighter;
 	font-size: .8em;
+	border-right: 1px solid lightgrey;
+	text-align: center;
+	
+}
+
+#message-form {
+	margin: 10px auto;
+	background: #fff;
+}
+
+#search-name {
+	width: 300px;
+	height: 40px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background-color: #f4f7f8;
 }
 
 .message-user {
-	margin: 0 auto;
-	padding-top: 20px;
+	margin: 20px 0 20px 10px;
+	font-size: .9em;
+	font-family: 'Montserrat', sans-serif;
+	color: #755AAF;
+	text-align: left;
 }
 
 button {
-  padding: 19px 39px 18px 39px;
+  padding: 19px 39px 35px 39px;
   color: #FFF;
-  background-color: #4bc970;
+  background-color: #755AAF;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
-  width: 100%;
-  border: 1px solid #3ac162;
+	width: 300px;
+	height: 50px;
+  border: 1px solid #755AAF;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   margin-bottom: 10px;
@@ -564,8 +583,90 @@ button {
   transition: 1s;
 }
 
-.textarea {
-	max-width: 100%;
+textarea {
+	border-radius: 5px;
+	width: 300px;
+	height: 150px;
+	background-color: #f4f7f8;
+	border: 1px solid lightgrey;
+	margin-bottom: 10px;
+}
+
+.settings-div {
+	width: 100%;	
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+	font-size: .8em;
+	border-right: 1px solid lightgrey;
+	text-align: center;
+}
+
+/*---- Settings Form ----*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.settings-activity {
+	text-align: left;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+.switch-div {
+	display: inline;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /*---- Media ----*/
@@ -624,14 +725,8 @@ button {
 		flex-direction: column;
 		justify-content: space-between;
 		font-family: 'Open Sans', sans-serif;
-	}
-	.recent-activity {
-		margin-left: 0;
 		border-bottom: 1px solid lightgrey;
 		font-weight: lighter;
-		display: flex;
-		flex-direction: column;
-		border-bottom: 1px solid lightgrey;
 		padding-left: 10px;
 	}
 	.members-flex {
@@ -640,6 +735,19 @@ button {
 	}
 	textarea {
 		resize: none;
+	}
+	.message-settings-flex {
+		display: flex;
+		flex-direction: row;
+	}
+	.settings-div,
+	.message-div {
+		width: 50%;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: lighter;
+		font-size: .8em;
+		border-right: 1px solid lightgrey;
+		text-align: center;
 	}
 }
 

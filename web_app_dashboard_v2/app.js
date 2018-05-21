@@ -17,7 +17,7 @@ let lineChart = new Chart(lChart, {
         lineTension: 0,
         data: [500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000],
         backgroundColor: [
-          'rgba(83, 89, 151, 0.25)',
+          'rgba(117, 90, 175, 0.25)',
         ],
         borderColor: [
           'rgba(83, 89, 151, 0.5)',
@@ -66,13 +66,13 @@ let barChart = new Chart(bChart, {
         fill: true,
         data: [50, 75, 150, 100, 200, 175, 57],
         backgroundColor: [
-          'rgba(83, 89, 151, 1)',
-          'rgba(83, 89, 151, 1)',
-          'rgba(83, 89, 151, 1)',
-          'rgba(83, 89, 151, 1)',
-          'rgba(83, 89, 151, 1)',
-          'rgba(83, 89, 151, 1)',
-          'rgba(83, 89, 151, 1)'
+          'rgba(117, 90, 175, 1)',
+          'rgba(117, 90, 175, 1)',
+          'rgba(117, 90, 175, 1)',
+          'rgba(117, 90, 175, 1)',
+          'rgba(117, 90, 175, 1)',
+          'rgba(117, 90, 175, 1)',
+          'rgba(117, 90, 175, 1)'
         ],
         borderColor: [
           'rgba(83, 89, 151, 0.5)',
@@ -121,7 +121,7 @@ let doughnutChart = new Chart(dChart, {
         fill: true,
         data: [100, 50, 25],
         backgroundColor: [
-          'rgba(83, 89, 151, 1)',
+          'rgba(117, 90, 175, 1)',
           'rgba(65, 200, 154, 1)', 
           'rgba(65, 182, 200, 1)',
         ],

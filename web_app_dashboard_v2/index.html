@@ -275,19 +275,39 @@
       </div>
 
       <!- Message user container form ->
-      <div class='message-div'>
-        <form id='message-form' action='index.html' method='post'>
-          <h3 class='message-user'>MESSAGE USER</h3>
-            <div class='search-container'>
-              <input required type='text' id='name' name='user_name' placeholder='Search for user'>
+      <div class='message-settings-flex'>
+        <div class='message-div'>
+          <form id='message-form' action='index.html' method='post'>
+
+            <legend>
+              <h2 class='message-user'>MESSAGE USER</h2>
+            </legend>
+            <div class='search-user'>
+              <input required type='text' id='search-name' name='user_name' placeholder='Search for User'>
             </div>
             <div class='textarea'>
-              <textarea id='other' name='user-bio'></textarea>
+              <textarea id='other' name='user-bio' placeholder='Message for User'></textarea>
             </div>
-     
-        </form>
-      </div>
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
 
+        <div class='settings-div'>
+          <legend>
+            <span class='settings-activity'>SETTINGS ACTIVITY</span>
+          </legend>
+
+          <form id='settings-form' action='index.html' method='post'>
+            <div class='switch-div'>
+              <label class='switch'>
+                <label class='light'>Send Email Notifications</label>
+                <input type='checkbox'>
+                <span class='slider round'></span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
 
 
 
