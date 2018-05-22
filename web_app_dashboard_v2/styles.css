@@ -4,6 +4,9 @@
 
 body {
 	max-width: 1200px;
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
 /*---- Header ----*/
@@ -18,11 +21,10 @@ body {
 	overflow: hidden;
 }
 
-.main-header{
+.main-header {
 	background: #755AAF;
 	overflow: hidden;
 	padding: 5px 10px;
-	z-index: 2;
 	width: 100%;
 }
 
@@ -36,7 +38,6 @@ body {
 	float: left;
 	padding: 15px 0px 10px 0px;
 	text-align: center;
-	z-index: 2;
 }
 
 .header-app {
@@ -78,29 +79,12 @@ body {
 	padding-top: 2px;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-
 /*---- Sidebar Navigation ----*/
 
-.sidebar {
-	background: #535997;
-}
 
-.nav-sidebar {
-	width: 60px;
-	margin-top: 20px;
-	margin-left: 15px;
-}
 
-nav img {
-	margin: 0 10px 25px 10px;
-	width: 25px;
-	height: 25px;
-}
+
+
 
 /*---- Header Icons ----*/
 
@@ -149,11 +133,24 @@ h2 {
 	border-left: 1px solid lightgrey;
 }
 
+.searchbox-div {
+	
+}
+
 #search-nav {
 	float: right;
 	margin-right: 10px;
-	
 	border-radius: 5px;
+}
+
+#filtersubmit {
+	float: right;
+  z-index: 1;
+	top: 1px;
+  color: #7B7B7B;
+  cursor: pointer;
+	width: 0;
+	padding-top: 5px;
 }
 
 .alert {
@@ -221,9 +218,9 @@ h2 {
 .traffic-container a:hover {
 	cursor: pointer;
 	color: white;
-  background-color: #14B897;
+	background-color: #755AAF;
 	border-radius: 10px;
-	opacity: .7;
+	opacity: .5;
 	transition: .5s ease;
 }
 
@@ -771,19 +768,34 @@ button.cancel {
 
 button.save,
 button.cancel {
+	width: 50%;
 	padding: 19px 39px 35px 39px;
   color: #FFF;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
-	width: 200px;
+	
 	height: 50px;
 }
 
 /*---- Media ----*/
 
  @media (min-width: 768px) {
+	
+	.sidebar {
+		background: #535997;
+	}
+	.nav-sidebar {
+		width: 60px;
+		margin-top: 20px;
+		margin-left: 15px;
+	}
+	nav img {
+		margin: 0 10px 25px 10px;
+		width: 25px;
+		height: 25px;
+	}
 	.traffic-container ul {
 		list-style-type: none;
 		float: right;

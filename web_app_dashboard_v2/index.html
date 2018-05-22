@@ -11,6 +11,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700,300' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -70,12 +71,15 @@
         </div>
 
         <form id='searchbox-form' action=''>
-          <input id='search-nav' required type='text' placeholder='Search' results='0'>
+          <div class='searchbox-div'>
+            <input id="search-nav" required type='text' placeholder='Search' results='0'/>
+            <i id="filtersubmit" class="fa fa-search"></i>
+          </div>
         </form>
       </div>
 
       <div class='alert'>
-        <span class='text-alert'>Alert</span>
+        <span class='text-alert'>Alert!</span>
         <span class='text-welcome'>Welcome to the stylish dashboard monitor mockup</span>
         <span class='closebtn' onclick="this.parentElement.style.display='none';">&times;</span>
       </div>
@@ -288,7 +292,7 @@
             <div class='textarea'>
               <textarea id='other' name='user-bio' placeholder='Message for User'></textarea>
             </div>
-            <button type="submit">SEND</button>
+            <button class='send' type="submit">SEND</button>
           </form>
         </div>
 
@@ -365,8 +369,7 @@
 
 
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script>
     <script src='app.js'></script>
 

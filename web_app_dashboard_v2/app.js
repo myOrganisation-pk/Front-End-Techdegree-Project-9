@@ -148,6 +148,26 @@ let doughnutChart = new Chart(dChart, {
   }
 });
 
+// Nav search box //
+$('#filtersubmit').click(function() {
+  alert('Searching for ' + $('#filter').val());
+});
+
+// Send button with confirmation message //
+const form = document.getElementById('message-form');
+form.onsubmit = function () {
+  alert('Message sent!');
+  form.reset();
+};
+
+
+
+
+
+ 
+  
+
+
 
 
 
