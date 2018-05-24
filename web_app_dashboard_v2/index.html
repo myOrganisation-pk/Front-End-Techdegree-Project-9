@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
@@ -72,15 +74,17 @@
 
         <form id='searchbox-form' action=''>
           <div class='searchbox-div'>
-            <input id="search-nav" required type='text' placeholder='Search' results='0'/>
+            <input id="search-nav" required type='text' placeholder='Search' results='0' />
             <i id="filtersubmit" class="fa fa-search"></i>
           </div>
         </form>
       </div>
 
       <div class='alert'>
-        <span class='text-alert'>Alert!</span>
-        <span class='text-welcome'>Welcome to the stylish dashboard monitor mockup</span>
+        <div class='alert-welcome-div'>
+          <span class='text-alert'>Alert!</span>
+          <span class='text-welcome'>Welcome to the stylish dashboard monitor mockup! Click the x to close this alert.</span>
+        </div>
         <span class='closebtn' onclick="this.parentElement.style.display='none';">&times;</span>
       </div>
 
@@ -88,16 +92,16 @@
       <div class='traffic-container'>
         <ul>
           <li>
-            <a href='#'>Hourly</a>
-            <a href='#'>Daily</a>
-            <a href='#'>Weekly</a>
-            <a href='#'>Monthly</a>
-            <li>
+            <button class='traffic-button' id='0' type='button'>HOURLY</button>
+            <button class='traffic-button' id='1' type='button'>DAILY</button>
+            <button class='traffic-button' id='2' type='button'>WEEKLY</button>
+            <button class='traffic-button' id='3' type='button'>MONTHLY</button>
+          </li>
         </ul>
         <div class='chart-title'>
           <h2>TRAFFIC</h2>
         </div>
-        <canvas id="lineChart" height: '400' width: '400'></canvas>
+        <canvas id="traffic" height: '400' width: '400'></canvas>
       </div>
 
       <!- Flex container for daily and traffic charts ->
@@ -281,14 +285,16 @@
       <!- Message user container form ->
       <div class='message-settings-flex'>
         <div class='message-div'>
-          <form id='message-form' action='index.html' method='post'>
+          <form id='message-form' autocomplete='off' action='' method='post'>
 
             <legend>
               <h2 class='message-user'>MESSAGE USER</h2>
             </legend>
-            <div class='search-user'>
+            
+            <div class='autocomplete' style='width:300px;'>
               <input required type='text' id='search-name' name='user_name' placeholder='Search for User'>
             </div>
+            
             <div class='textarea'>
               <textarea id='other' name='user-bio' placeholder='Message for User'></textarea>
             </div>
