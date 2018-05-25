@@ -304,38 +304,66 @@ function autocomplete(inp, arr) {
 
 autocomplete(document.getElementById('search-name'), userNames);
 
+
 //---- LOCAL STORAGE ----//
 
 window.onload = function () {
+  // message user //
   if (localStorage) {
     document.getElementById('message-form').addEventListener('submit', function () {
       var name = document.getElementById('search-name').value;
       localStorage.setItem('search-name', name);
     });
+
+    // Send button with confirmation message //
+    const form = document.getElementById('message-form');
+    const search = document.getElementById('search-name');
+    const textArea = document.getElementById('other');
+
+    form.onsubmit = function (e) {
+      e.preventDefault();
+      var name = localStorage.getItem('search-name');
+      if (search.value.length == 0 || textArea.value.length == 0) {
+        alert('Please enter a message.');
+      } else {
+        alert('Message sent to ' + name);
+        form.reset();
+      }
+    };
+
+    // Settings //
+
+    // On/Off switches //
+    document.getElementById('checkbox').click(function (e) {
+      if (e.target.checked) {
+        localStorage.checked = true;
+      } else {
+        localStorage.checked = false;
+      }
+    })
+    $(document).ready(function () {
+      document.querySelector('#checkbox').checked = localStorage.checked
+    });
+
+
+
+    document.getElementById('settings-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var timeZone = document.getElementById('timezone').value;
+      localStorage.setItem('timezone', timeZone);
+    });
+    var timeZone = localStorage.getItem(timezone);
+    
+
+
   }
-
-  // Send button with confirmation message //
-  const form = document.getElementById('message-form');
-  const search = document.getElementById('search-name');
-  const textArea = document.getElementById('other');
-
-  form.onsubmit = function (e) {
-    e.preventDefault();
-    var name = localStorage.getItem('search-name');
-    if (search.value.length == 0 || textArea.value.length == 0) {
-      alert('Please enter a message.');
-    } else {
-      alert('Message sent to ' + name);
-      form.reset();
-    }
-  };
 }
 
-
-
-
-
-
+/*
+var checkBox = document.getElementById('checkbox').value;
+localStorage.setItem('checkbox', checkBox);
+var checkBox = localStorage.getItem(checkbox);
+*/
 
 
 

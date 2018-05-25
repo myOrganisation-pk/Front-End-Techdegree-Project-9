@@ -309,10 +309,11 @@
 
 
           <form id='settings-form' action='index.html' method='post'>
+            
             <div class='switch-div'>
               <h2 class='light'>Send Email Notifications</h2>
               <label class='switch'>
-                <input type='checkbox'>
+                <input id='checkbox' type='checkbox'>
                 <span class='slider round'>ON</span>
                 <span class='slider-inner'></span>
               </label>
@@ -321,7 +322,7 @@
             <div class='switch-div'>
               <h2 class='light'>Set Profile to Public</h2>
               <label class='switch'>
-                <input type='checkbox'>
+                <input id='checkbox' type='checkbox'>
                 <span class='slider round'>ON</span>
               </label>
             </div>
@@ -343,8 +344,8 @@
               </div>
 
               <div class='btn-group'>
-                <button class='save' type="save">SAVE</button>
-                <button class='cancel' type="cancel">CANCEL</button>
+                <button class='save' type="submit">SAVE</button>
+                <button class='cancel' type="reset">CANCEL</button>
               </div>
             </div>
           </form>
