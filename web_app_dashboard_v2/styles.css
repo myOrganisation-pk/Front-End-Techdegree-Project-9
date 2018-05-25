@@ -173,11 +173,9 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
 	padding-left: 5px;
-	
 }
 
 .closebtn {
- 
   padding-right: 5px;
 }
 
@@ -185,7 +183,6 @@ h2 {
 
 .traffic-container {
 	max-width: 100%;
-
 }
 
 .chart-title {
@@ -200,6 +197,8 @@ h2 {
   border-bottom: 1px solid lightgrey;
 	padding-bottom: 10px;
 	font-size: .5em;
+	max-width: 1200px;
+	max-height: 300px;
 }
 
 .traffic-button { 
@@ -557,7 +556,7 @@ img .chevron {
 
 .message-div {
 	max-width: 600px;
-	padding-top: 15px;
+
 	font-family: 'Montserrat', sans-serif;
 	font-weight: lighter;
 	font-size: .8em;
@@ -576,6 +575,7 @@ img .chevron {
 	margin-bottom: 20px;
 	border-radius: 5px;
 	background-color: #f4f7f8;
+	padding-left: 0;
 }
 
 /* Autocomplete */
@@ -643,8 +643,8 @@ button {
   border-radius: 5px;
 	width: 300px;
 	height: 50px;
-  border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  border-width: 1px 1px 1px;
+  box-shadow: none;
   margin-bottom: 10px;
   opacity: 1;
   transition: 1s;
@@ -653,7 +653,7 @@ button {
 textarea {
 	border-radius: 5px;
 	width: 300px;
-	height: 135px;
+	height: 148px;
 	background-color: #f4f7f8;
 	border: 1px solid lightgrey;
 	margin-bottom: 10px;
@@ -718,17 +718,18 @@ textarea::placeholder {
 }
 
 .slider-inner:before {
-	content: 'ON';
 	padding-left: 10px;
 	color: #fff;
 }
 
 input:checked + .slider {
-	background-color: #2196F3;
+	background-color: #755AAF;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+	box-shadow: 0 0 1px #755AAF;
+	content: 'ON';
+	color: #fff;
 }
 
 input:checked + .slider:before {
@@ -741,6 +742,9 @@ input:checked + .slider:before {
 .slider.round {
 	border-radius: 34px;
 	text-align: left;
+	color: #fff;
+	font-weight: bolder;
+	padding: 10px 0 0 5px;
 }
 
 .slider.round:before {
@@ -816,7 +820,6 @@ button.save {
 	background-color: #755AAF;
 	border: 1px solid #755AAF;
   border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   opacity: 1;
   transition: 1s;
 }
@@ -826,7 +829,6 @@ button.cancel {
 	background-color: #ccc;
 	border: 1px solid #ccc;
   border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   opacity: 1;
   transition: 1s;
 }
