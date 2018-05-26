@@ -336,25 +336,24 @@ window.onload = function () {
 
     // On/Off switches //
     $('#save').click(function (e) {
-  
+
       let email = $('email-checkbox').prop('checked');
       localStorage.setItem('myEmailSetting', email);
       if (localStorage.getItem('myEmailSetting') == 'true') {
-        $('email-checkbox').prop('checked', true) ;
+        $('email-checkbox').prop('checked', true);
       } else {
         $('email-checkbox').prop('checked', false);
       }
     });
-      
-    
 
-    
+
+
+
     // timezone //
     const timeZone = document.getElementById('timezone').value;
     document.getElementById('settings-form').addEventListener('submit', function (e) {
-      
-      localStorage.setItem('timezone', timeZone.selectedIndex);
-      
+      e.preventDefault();
+      localStorage.setItem('timezone', timezone.selectedIndex);
     });
   }
 }
