@@ -313,6 +313,7 @@ window.onload = function () {
     document.getElementById('message-form').addEventListener('submit', function () {
       var name = document.getElementById('search-name').value;
       localStorage.setItem('search-name', name);
+      timezone.selectedIndex = localStorage.getItem('timezone');
     });
 
     // Send button with confirmation message //
@@ -338,22 +339,23 @@ window.onload = function () {
   
       let email = $('email-checkbox').prop('checked');
       localStorage.setItem('myEmailSetting', email);
-      
-    });
       if (localStorage.getItem('myEmailSetting') == 'true') {
         $('email-checkbox').prop('checked', true) ;
       } else {
         $('email-checkbox').prop('checked', false);
       }
+    });
+      
     
 
-
+    
     // timezone //
+    const timeZone = document.getElementById('timezone').value;
     document.getElementById('settings-form').addEventListener('submit', function (e) {
-      var timeZone = document.getElementById('timezone').value;
-      localStorage.setItem('timezone', timeZone);
+      
+      localStorage.setItem('timezone', timeZone.selectedIndex);
+      
     });
-    $('#timezone').val(localStorage.getItem('timezone'));
   }
 }
 
