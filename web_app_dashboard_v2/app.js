@@ -342,28 +342,24 @@ window.onload = function () {
       }
     })
     $(document).ready(function () {
-      document.querySelector('#checkbox').checked = localStorage.checked
+      document.querySelector('#checkbox').checked = localStorage.checked;
     });
 
 
-
+    // timezone //
     document.getElementById('settings-form').addEventListener('submit', function (e) {
-      e.preventDefault();
+
       var timeZone = document.getElementById('timezone').value;
       localStorage.setItem('timezone', timeZone);
     });
     var timeZone = localStorage.getItem(timezone);
-    
-
 
   }
 }
 
-/*
-var checkBox = document.getElementById('checkbox').value;
-localStorage.setItem('checkbox', checkBox);
-var checkBox = localStorage.getItem(checkbox);
-*/
+
+
+
 
 
 
