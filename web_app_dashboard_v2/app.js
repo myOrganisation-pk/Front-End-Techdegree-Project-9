@@ -334,28 +334,29 @@ window.onload = function () {
     // Settings //
 
     // On/Off switches //
-    document.getElementById('checkbox').click(function (e) {
-      if (e.target.checked) {
-        localStorage.checked = true;
-      } else {
-        localStorage.checked = false;
-      }
-    })
-    $(document).ready(function () {
-      document.querySelector('#checkbox').checked = localStorage.checked;
+    $('#save').click(function (e) {
+  
+      let email = $('email-checkbox').prop('checked');
+      localStorage.setItem('myEmailSetting', email);
+      
     });
+      if (localStorage.getItem('myEmailSetting') == 'true') {
+        $('email-checkbox').prop('checked', true) ;
+      } else {
+        $('email-checkbox').prop('checked', false);
+      }
+    
 
 
     // timezone //
     document.getElementById('settings-form').addEventListener('submit', function (e) {
-
       var timeZone = document.getElementById('timezone').value;
       localStorage.setItem('timezone', timeZone);
     });
-    var timeZone = localStorage.getItem(timezone);
-
+    $('#timezone').val(localStorage.getItem('timezone'));
   }
 }
+
 
 
 

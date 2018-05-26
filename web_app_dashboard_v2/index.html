@@ -307,13 +307,12 @@
 
           <h2 class='settings-activity'>SETTINGS</h2>
 
-
           <form id='settings-form' action='index.html' method='post'>
             
             <div class='switch-div'>
               <h2 class='light'>Send Email Notifications</h2>
               <label class='switch'>
-                <input id='checkbox' type='checkbox'>
+                <input id='email-checkbox' type='checkbox'>
                 <span class='slider round'>ON</span>
                 <span class='slider-inner'></span>
               </label>
@@ -322,7 +321,7 @@
             <div class='switch-div'>
               <h2 class='light'>Set Profile to Public</h2>
               <label class='switch'>
-                <input id='checkbox' type='checkbox'>
+                <input id='profile-checkbox' type='checkbox'>
                 <span class='slider round'>ON</span>
               </label>
             </div>
@@ -344,8 +343,8 @@
               </div>
 
               <div class='btn-group'>
-                <button class='save' type="submit">SAVE</button>
-                <button class='cancel' type="reset">CANCEL</button>
+                <button class='save' id='save' type="submit">SAVE</button>
+                <button class='cancel' id='cancel' type="submit">CANCEL</button>
               </div>
             </div>
           </form>
@@ -375,7 +374,7 @@
 
 
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script>
     <script src='app.js'></script>
