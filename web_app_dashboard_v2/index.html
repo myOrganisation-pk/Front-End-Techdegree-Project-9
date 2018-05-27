@@ -80,12 +80,18 @@
         </form>
       </div>
 
-      <div class='alert'>
-        <div class='alert-welcome-div'>
-          <span class='text-alert'>Alert!</span>
-          <span class='text-welcome'>Welcome to the stylish dashboard monitor mockup! Click the x to close this alert.</span>
-        </div>
+      <div class="trigger_popup_fricc">Alert! Welcome to the stylish dashboard monitor mockup! Click the x to close this icon.
         <span class='closebtn' onclick="this.parentElement.style.display='none';">&times;</span>
+      </div>
+      <div class="hover_bkgr_fricc">
+        <span class="helper"></span>
+        <div>
+          <div class="popupCloseButton">X</div>
+          <p>Notification: Thank you for visiting this social media mockup page.
+            <br />
+          </p>
+          <p>Notification: You can click on the charts, message users, and save personalized settings!</p>
+        </div>
       </div>
 
       <!- Traffic Container ->
@@ -290,11 +296,11 @@
             <legend>
               <h2 class='message-user'>MESSAGE USER</h2>
             </legend>
-            
+
             <div class='autocomplete'>
               <input required type='text' id='search-name' name='user_name' placeholder='Search for User'>
             </div>
-            
+
             <div class='textarea'>
               <textarea id='other' name='user-bio' placeholder='Message for User'></textarea>
             </div>
@@ -308,7 +314,7 @@
           <h2 class='settings-activity'>SETTINGS</h2>
 
           <form id='settings-form' action='index.html' method='post'>
-            
+
             <div class='switch-div'>
               <h2 class='light'>Send Email Notifications</h2>
               <label class='switch'>
@@ -374,7 +380,8 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script>
     <script src='app.js'></script>

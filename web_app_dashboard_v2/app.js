@@ -1,5 +1,27 @@
 
 
+// Popup functionality //
+$(window).load(function () {
+  $(".trigger_popup_fricc").click(function () {
+    $('.hover_bkgr_fricc').show();
+  });
+  $('.hover_bkgr_fricc').click(function () {
+    $('.hover_bkgr_fricc').hide();
+  });
+  $('.popupCloseButton').click(function () {
+    $('.hover_bkgr_fricc').hide();
+  });
+  
+  // alert icon with 2 alert messages //
+  
+});
+let closeBtn = document.querySelector('.closebtn');
+  closeBtn.addEventListener('click', function () {
+    alert('Thank you for visiting this page.');
+    alert('This message will now self destruct.');
+  });
+
+
 // Line chart variables and layout //
 var chart_labels = ["0:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"];
 var traffic_data = ['100', '120', '130', '150', '120', '130', '150', '160', '180', '200', '250', '300', '500', '800', '700', '750', '1200', '1000', '900', '1000', '1200', '800', '600', '550', '400'];
@@ -189,17 +211,6 @@ let doughnutChart = new Chart(dChart, {
 $('#filtersubmit').click(function () {
   alert('Searching for ' + $('#filter').val());
 });
-
-
-
-// alert icon with 2 alert messages //
-const closeBtn = document.querySelector('.closebtn');
-closeBtn.addEventListener('click', function () {
-  alert('Thank you for visiting this page.');
-  alert('This message will now self destruct.');
-});
-
-
 
 
 //******* AUTOCOMPLETE FUNCTIONALITY FOR USER SEARCH ******* //
