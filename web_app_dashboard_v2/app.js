@@ -194,15 +194,15 @@ $('#filtersubmit').click(function () {
 
 // alert icon with 2 alert messages //
 const closeBtn = document.querySelector('.closebtn');
-
 closeBtn.addEventListener('click', function () {
   alert('Thank you for visiting this page.');
   alert('This message will now self destruct.');
 });
 
 
-//******* AUTOCOMPLETE FUNCTIONALITY FOR USER SEARCH ******* //
 
+
+//******* AUTOCOMPLETE FUNCTIONALITY FOR USER SEARCH ******* //
 var userNames = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 
 function autocomplete(inp, arr) {
@@ -307,14 +307,17 @@ autocomplete(document.getElementById('search-name'), userNames);
 
 //---- LOCAL STORAGE ----//
 
+const timeZone = document.getElementById('timezone');
+
 window.onload = function () {
   // message user //
   if (localStorage) {
     document.getElementById('message-form').addEventListener('submit', function () {
       var name = document.getElementById('search-name').value;
       localStorage.setItem('search-name', name);
-      timezone.selectedIndex = localStorage.getItem('timezone');
+
     });
+    timezone.selectedIndex = localStorage.getItem('timezone');
 
     // Send button with confirmation message //
     const form = document.getElementById('message-form');
@@ -335,28 +338,46 @@ window.onload = function () {
     // Settings //
 
     // On/Off switches //
-    $('#save').click(function (e) {
+    document.getElementById('save').addEventListener('click', function (event) {
 
-      let email = $('email-checkbox').prop('checked');
-      localStorage.setItem('myEmailSetting', email);
-      if (localStorage.getItem('myEmailSetting') == 'true') {
-        $('email-checkbox').prop('checked', true);
-      } else {
-        $('email-checkbox').prop('checked', false);
-      }
+      let email = document.getElementById('email-checkbox').checked;
+      localStorage.setItem('emailSetting', email);
+
+      let profile = document.getElementById('profile-checkbox').checked;
+      localStorage.setItem('privacySetting', profile);
     });
 
+    // email switch on refresh
+    if (localStorage.getItem('emailSetting') == 'true') {
+      $('#email-checkbox').prop('checked', true);
+    } else {
+      $('#email-checkbox').prop('checked', false);
+    }
 
-
+    // privacy switch on refresh
+    if (localStorage.getItem('privacySetting') == 'true') {
+      $('#profile-checkbox').prop('checked', true);
+    } else {
+      $('#profile-checkbox').prop('checked', false);
+    }
 
     // timezone //
-    const timeZone = document.getElementById('timezone').value;
     document.getElementById('settings-form').addEventListener('submit', function (e) {
-      e.preventDefault();
       localStorage.setItem('timezone', timezone.selectedIndex);
     });
   }
 }
+// reset local storage with cancel button //
+document.getElementById('cancel').addEventListener('click', function (e) {
+  e.preventDefault();
+  localStorage.clear();
+  $('#timezone').val('');
+  $('#email-checkbox').prop('checked', false);
+  $('#profile-checkbox').prop('checked', false);
+});
+
+
+
 
 
 
