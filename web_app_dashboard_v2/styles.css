@@ -10,11 +10,12 @@ body {
 }
 
 /*---- Header ----*/
-
+/*
 .main-wrapper {
 	display: flex;
+	justify-content: center;
 }
-
+*/
 .main-content {
 	display: flex;
 	flex-direction: column;
@@ -79,7 +80,31 @@ body {
 	padding-top: 2px;
 }
 
-/*---- Sidebar Navigation ----*/
+/*---- Navigation ----*/
+
+.navigation {
+	background: #535997;
+	height: 60px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.nav-bar ul {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	padding-left: 0;
+	padding-top: 15px;
+}
+
+.nav-bar li {
+	list-style-type: none;
+}
+
+.nav-bar img {
+	height: 30px;
+	width: 30px;
+}
 
 /*---- Header Icons ----*/
 
@@ -109,7 +134,7 @@ body {
 }
 
 h2 {
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 .dashboard-nav {
@@ -125,6 +150,7 @@ h2 {
 	background: #f4f7f8;
 	border-bottom: 1px solid lightgrey;
 	border-left: 1px solid lightgrey;
+	border-top: 1px solid lightgrey;
 }
 
 #search-nav {
@@ -210,8 +236,6 @@ h2 {
 .trigger_popup_fricc {
 	padding-left: 5px;
 	cursor: pointer;
-	margin-left: 10px;
-	margin-right: 10px;
   background-color: #755AAF;
   color: #fff;
   height: 30px;
@@ -839,7 +863,7 @@ select {
 }
 
 .input-text {
-	color: lightgrey;
+	color: grey;
 	height: 40px;
 	margin-bottom: 0;
 	width: 520px;
@@ -892,20 +916,36 @@ button.cancel {
 /*---- Media ----*/
 
  @media (min-width: 768px) {
+	.main-wrapper {
+		padding-left: 60px;
+	}
 	
-	.sidebar {
+	.navigation {
 		background: #535997;
+		height: 1600px;
+		max-width: 60px;
+		margin: 0 auto;
+		float: left;
 	}
-	.nav-sidebar {
-		width: 60px;
-		margin-top: 20px;
-		margin-left: 15px;
+	
+	.nav-bar ul {
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		margin-top: 0;
 	}
-	nav img {
-		margin: 0 10px 25px 10px;
-		width: 25px;
-		height: 25px;
+	
+	.nav-bar li {
+		list-style-type: none;
+	
 	}
+	
+	.nav-bar img {
+		height: 30px;
+		width: 30px;
+	}
+
 	.traffic-container ul {
 		list-style-type: none;
 		float: right;
@@ -982,6 +1022,19 @@ button.cancel {
 		font-size: .8em;
 		border-right: 1px solid lightgrey;
 		text-align: center;
+	}
+	.trigger_popup_fricc {
+		padding-left: 5px;
+		cursor: pointer;
+		margin-left: 10px;
+		margin-right: 10px;
+		background-color: #755AAF;
+		color: #fff;
+		height: 30px;
+		border-radius: 5px;
+		line-height: 30px;
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
