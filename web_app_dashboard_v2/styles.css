@@ -199,6 +199,7 @@ h2 {
 	height: 60px;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 }
 
 #searchbox-form {
@@ -209,14 +210,15 @@ h2 {
 	border-bottom: 1px solid lightgrey;
 	border-left: 1px solid lightgrey;
 	border-top: 1px solid lightgrey;
+
 }
 
 #search-nav {
-	max-width: 270px;
+	max-width: 190px;
 	float: right;
 	margin-right: 10px;
 	border-radius: 5px;
-	margin-left: -250px;
+	margin-left: -170px;
 }
 
 #filtersubmit {
@@ -268,7 +270,7 @@ h2 {
 }
 
 .chart-title {
-	padding-top: 20px;
+	padding-top: 35px;
 	padding-bottom: 10px;
 	float: left;
 	font-size: .5em;
@@ -301,11 +303,13 @@ h2 {
   list-style-type: none;
 	text-align: center;
 	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 .traffic-container a {
 	font-size: 15px;
-  
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 }
@@ -654,7 +658,7 @@ img .chevron {
 #search-name {
 	width: 300px;
 	height: 40px;
-	margin-bottom: 20px;
+	margin-bottom: 22px;
 	border-radius: 5px;
 	background-color: #f4f7f8;
 	padding-left: 0;
@@ -724,18 +728,18 @@ button {
   font-style: normal;
   border-radius: 5px;
 	width: 300px;
-	height: 50px;
-  border-width: 1px 1px 1px;
+	height: 58px;
   box-shadow: none;
   margin-bottom: 10px;
   opacity: 1;
-  transition: 1s;
+	transition: 1s;
+	border: none;
 }
 
 textarea {
 	border-radius: 5px;
 	width: 300px;
-	height: 148px;
+	height: 147px;
 	background-color: #f4f7f8;
 	border: 1px solid lightgrey;
 	margin-bottom: 10px;
@@ -933,7 +937,6 @@ button.cancel {
 	.main-wrapper {
 		padding-left: 60px;
 	}
-	
 	.navigation {
 		background: #535997;
 		height: 1600px;
@@ -941,7 +944,6 @@ button.cancel {
 		margin: 0 auto;
 		float: left;
 	}
-	
 	.nav-bar ul {
 		height: 300px;
 		display: flex;
@@ -949,17 +951,20 @@ button.cancel {
 		justify-content: space-around;
 		margin-top: 0;
 	}
-	
 	.nav-bar li {
 		list-style-type: none;
-	
 	}
-	
 	.nav-bar img {
 		height: 30px;
 		width: 30px;
 	}
-
+	#search-nav {
+		max-width: 230px;
+		float: right;
+		margin-right: 10px;
+		border-radius: 5px;
+		margin-left: -210px;
+	}
 	.traffic-container ul {
 		list-style-type: none;
 		float: right;
