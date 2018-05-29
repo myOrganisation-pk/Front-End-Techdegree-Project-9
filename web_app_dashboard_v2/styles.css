@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
 h2 {
 
 }
@@ -24,7 +32,8 @@ h2 {
 	background: #755AAF;
 	overflow: hidden;
 	padding: 5px 10px;
-	max-width: 100%;
+  max-width: 100%;
+  z-index: 1000;
 }
 
 .clearfix {
@@ -526,7 +535,7 @@ h3 {
   border-bottom: 1px solid lightgrey;
   border-left: 1px solid lightgrey;
 	font-weight: lighter;
-	padding: 20px;
+	padding: 0 20px 20px 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -535,7 +544,7 @@ h3 {
 
 .recent-activity {
 	max-width: 100%;
-	padding: 20px;
+	padding: 0 20px 20px 20px;
 	border-bottom: 1px solid lightgrey;
 	font-weight: lighter;
 	display: flex;
@@ -579,7 +588,9 @@ h3 {
 }
 
 .contact-info {
-	padding-top: 5px;
+  padding-top: 5px;
+  display: inline-block;
+  
 }
 
 .pic {
@@ -599,7 +610,7 @@ h3 {
 }
 
 .date {
-	font-size: .8em;
+	font-size: .7em;
 	color: grey;
 }
 
@@ -607,14 +618,14 @@ h3 {
 	text-align: left;
 	margin: 0 auto;
 	font-family: 'Montserrat', sans-serif;
-	font-size: .8em;
+	font-size: .7em;
 	color: grey;
 }
 
 .email {
 	text-decoration: none;
 	font-family: 'Montserrat', sans-serif;
-	font-size: .8em;
+	font-size: .7em;
 	color: #755AAF;
 }
 
@@ -622,14 +633,14 @@ h3 {
 	text-align: left;
 	margin: 0 auto;
 	font-family: 'Montserrat', sans-serif;
-	font-size: .8em;
+	font-size: .7em;
 	color: grey;
 }
 
 .time {
 	color: grey;
 	font-family: 'Montserrat', sans-serif;
-	font-size: .8em;
+	font-size: .7em;
 	margin: 0 auto;
 }
 
@@ -789,7 +800,8 @@ textarea::placeholder {
 .settings-activity {
 	font-size: .9em;
 	text-align: left;
-	color: #755AAF;
+  color: #755AAF;
+  margin-bottom: 0;
 }
 
 /* Hide default HTML checkbox */
@@ -899,7 +911,7 @@ select {
 .select-timezone {
 	text-align: left;
 	display: flex;
-	padding: 20px 0 10px 0;
+	padding: 30px 0 10px 0;
 }
 
 .input-text {
@@ -950,16 +962,27 @@ button.cancel {
 	.main-wrapper {
 		padding-left: 60px;
 		max-width: 1200px;
-	}
+  }
+  .main-header {
+    background: #755AAF;
+    overflow: hidden;
+    padding: 5px 10px;
+    max-width: 100%;
+  }
 	.navigation {
 		background: #535997;
-		height: 1600px;
+		height: 100%;
 		max-width: 60px;
 		margin: 0 auto;
-		float: left;
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 	}
 	.nav-bar ul {
-		height: 300px;
+    padding-top: 50px;
+		height: 400px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -1042,7 +1065,6 @@ button.cancel {
 		font-family: 'Open Sans', sans-serif;
 		border-bottom: 1px solid lightgrey;
 		font-weight: lighter;
-		padding: 20px;
 	}
 	.members-flex {
 		display: flex;
@@ -1080,8 +1102,7 @@ button.cancel {
 		justify-content: space-between;
 	}
 	.alert {
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: 0 20px 10px 20px;
 		padding-left: 5px;
 		cursor: pointer;
 		background-color: #755AAF;
