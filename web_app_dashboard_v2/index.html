@@ -86,70 +86,72 @@
   <!-- Main wrapper -->
   <div class='main-wrapper'>
 
-    <!-- Main content div -->
-    <div class='main-content'>
+    <!-- Dashboard Container -->
+    <div class='dashboard-nav'>
+      <div class='dashboard' id='dashboard'>
+        <h1 class='dashboard-text'>Dashboard</h1>
+      </div>
 
-      <!-- Dashboard Container -->
-      <div class='dashboard-nav'>
-        <div class='dashboard' id='dashboard'>
-          <h2>Dashboard</h2>
+      <form id='searchbox-form' action='post'>
+        <div class='searchbox-div'>
+          <input id="search-nav" required type='text' placeholder='Search' />
+          <i id="filtersubmit" class="fa fa-search"></i>
         </div>
+      </form>
+    </div>
 
-        <form id='searchbox-form' action='post'>
-          <div class='searchbox-div'>
-            <input id="search-nav" required type='text' placeholder='Search' />
-            <i id="filtersubmit" class="fa fa-search"></i>
-          </div>
-        </form>
+    <div class='alert'>
+      <span class='text-alert'>Alert!</span>
+      <span class='text-welcome'>Welcome to my social media site mockup!</span>
+      <span class='closebtn' onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+
+
+    <!-- Traffic Container -->
+    <div class='traffic-container' id='visits'>
+      <ul>
+        <li>
+          <button class='traffic-button' id='0' type='button'>HOURLY</button>
+          <button class='traffic-button' id='1' type='button'>DAILY</button>
+          <button class='traffic-button' id='2' type='button'>WEEKLY</button>
+          <button class='traffic-button' id='3' type='button'>MONTHLY</button>
+        </li>
+      </ul>
+      <div class='chart-title'>
+        <h2>TRAFFIC</h2>
       </div>
+      <canvas id="traffic"></canvas>
+    </div>
 
-      <div class='alert'>
-        <span class='text-alert'>Alert!</span>
-        <span class='text-welcome'>Welcome to my social media site mockup!</span>
-        <span class='closebtn' onclick="this.parentElement.style.display='none';">&times;</span>
-      </div>
-
-
-      <!-- Traffic Container -->
-      <div class='traffic-container' id='visits'>
-        <ul>
-          <li>
-            <button class='traffic-button' id='0' type='button'>HOURLY</button>
-            <button class='traffic-button' id='1' type='button'>DAILY</button>
-            <button class='traffic-button' id='2' type='button'>WEEKLY</button>
-            <button class='traffic-button' id='3' type='button'>MONTHLY</button>
-          </li>
-        </ul>
+    <!-- Flex container for daily and traffic charts -->
+    <div class='container-flex'>
+      <!-- Daily Traffic container -->
+      <div class='container-daily'>
         <div class='chart-title'>
-          <h2>TRAFFIC</h2>
+          <h2>DAILY TRAFFIC</h2>
         </div>
-        <canvas id="traffic"></canvas>
+        <canvas id="barChart"></canvas>
       </div>
 
-      <!-- Flex container for daily and traffic charts -->
-      <div class='container-flex'>
-        <!-- Daily Traffic container -->
-        <div class='container-daily'>
-          <div class='chart-title'>
-            <h2>DAILY TRAFFIC</h2>
-          </div>
-          <canvas id="barChart"></canvas>
+      <!-- Mobile container -->
+      <div class='container-mobile'>
+        <div class='chart-title'>
+          <h2>MOBILE USERS</h2>
         </div>
-
-        <!-- Mobile container -->
-        <div class='container-mobile'>
-          <div class='chart-title'>
-            <h2>MOBILE USERS</h2>
-          </div>
-          <canvas id='doughnutChart'></canvas>
-        </div>
-
+        <canvas id='doughnutChart'></canvas>
       </div>
-      <!-- End of dashboard and traffic container -->
+
+    </div>
+    <!-- End of dashboard and traffic container -->
 
 
-      <!-- Social media container -->
-      <div class='container-social'>
+    <!-- Social media container -->
+    <div class='container-social'>
+      <div class='chart-title'>
+        <h2>SOCIAL STATS</h2>
+      </div>
+
+      <div class='wrapper-social'>
         <div class='twitter-container'>
           <div class='twitter-stats'>
             <h3>Twitter</h3>
@@ -195,184 +197,182 @@
           </div>
         </div>
       </div>
-      <!-- End of social media container -->
+    </div>
+    <!-- End of social media container -->
 
-      <!-- Members flex container -->
-      <div class='members-flex' id='members'>
-        <!-- New members container -->
-        <div class='new-members'>
-          <h3 id='members-text'>NEW MEMBERS</h3>
+    <!-- Members flex container -->
+    <div class='members-flex' id='members'>
+      <!-- New members container -->
+      <div class='new-members'>
+        <h3 id='members-text'>NEW MEMBERS</h3>
 
-          <div class='member-div'>
-            <div class='profile-info'>
-              <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/women/82.jpg'>
-              <div class='contact-info'>
-                <p class='name'>Victoria Chambers</p>
-                <a class='email' href='victoria.chambers@example.com'>victoria.chambers@example.com</a>
-              </div>
+        <div class='member-div'>
+          <div class='profile-info'>
+            <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/women/82.jpg'>
+            <div class='contact-info'>
+              <p class='name'>Victoria Chambers</p>
+              <a class='email' href='victoria.chambers@example.com'>victoria.chambers@example.com</a>
             </div>
-            <p class='date'>10/15/2015</p>
           </div>
-
-          <div class='member-div'>
-            <div class='profile-info'>
-              <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
-              <div class='contact-info'>
-                <p class='name'>Dale Byrd</p>
-                <a class='email' href='dale.byrd52@example.com'>dale.byrd52@example.com</a>
-              </div>
-            </div>
-            <p class='date'>10/15/2015</p>
-          </div>
-
-          <div class='member-div'>
-            <div class='profile-info'>
-              <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/women/60.jpg'>
-              <div class='contact-info'>
-                <p class='name'>Dawn Wood</p>
-                <a class='email' href='dawn.wood16@example.com'>dawn.wood@example.com</a>
-              </div>
-            </div>
-            <p class='date'>10/15/2015</p>
-          </div>
-
-          <div class='member-div-last'>
-            <div class='profile-info'>
-              <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/men/25.jpg'>
-              <div class='contact-info'>
-                <p class='name'>Dan Oliver</p>
-                <a class='email' href='dan.oliver82@example.com'>dan.oliver82@example.com</a>
-              </div>
-            </div>
-            <p class='date'>10/15/2015</p>
-          </div>
+          <p class='date'>10/15/2015</p>
         </div>
-        <!-- End of new members div -->
 
-        <!-- Recent activity container -->
-        <div class='recent-activity'>
-          <h3 id='activity-text'>RECENT ACTIVITY</h3>
-
-          <div class='activity-div'>
-            <div class='profile-info'>
-              <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/women/82.jpg'>
-              <div class='contact-info'>
-                <p class='comment'>Victoria Chambers commented on YourApp's SEO Tips</p>
-                <p class='time'>4 hours ago</p>
-              </div>
+        <div class='member-div'>
+          <div class='profile-info'>
+            <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
+            <div class='contact-info'>
+              <p class='name'>Dale Byrd</p>
+              <a class='email' href='dale.byrd52@example.com'>dale.byrd52@example.com</a>
             </div>
-            <img class='chevron' alt='chevron' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
-            />
           </div>
-
-          <div class='activity-div'>
-            <div class='profile-info'>
-              <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
-              <div class='contact-info'>
-                <p class='comment'>Dale Byrd like the post Facebook's Changes for 2016</p>
-                <p class='time'>5 hours ago</p>
-              </div>
-            </div>
-            <img class='chevron' alt='chevron' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
-            />
-          </div>
-
-          <div class='activity-div'>
-            <div class='profile-info'>
-              <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/women/60.jpg'>
-              <div class='contact-info'>
-                <p class='comment'>Dawn Wood commented on Facebook's Changes for 2016</p>
-                <p class='time'>5 hours ago</p>
-              </div>
-            </div>
-            <img class='chevron' alt='chevron' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
-            />
-          </div>
-
-          <div class='activity-div-last'>
-            <div class='profile-info'>
-              <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/men/25.jpg'>
-              <div class='contact-info'>
-                <p class='comment'>Dan Oliver posted YourApp's SEO Tips</p>
-                <p class='time'>1 day ago</p>
-              </div>
-            </div>
-            <img class='chevron' alt='chevron' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
-            />
-          </div>
+          <p class='date'>10/15/2015</p>
         </div>
-        <!-- End of members flex container -->
+
+        <div class='member-div'>
+          <div class='profile-info'>
+            <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/women/60.jpg'>
+            <div class='contact-info'>
+              <p class='name'>Dawn Wood</p>
+              <a class='email' href='dawn.wood16@example.com'>dawn.wood@example.com</a>
+            </div>
+          </div>
+          <p class='date'>10/15/2015</p>
+        </div>
+
+        <div class='member-div-last'>
+          <div class='profile-info'>
+            <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/men/25.jpg'>
+            <div class='contact-info'>
+              <p class='name'>Dan Oliver</p>
+              <a class='email' href='dan.oliver82@example.com'>dan.oliver82@example.com</a>
+            </div>
+          </div>
+          <p class='date'>10/15/2015</p>
+        </div>
+      </div>
+      <!-- End of new members div -->
+
+      <!-- Recent activity container -->
+      <div class='recent-activity'>
+        <h3 id='activity-text'>RECENT ACTIVITY</h3>
+
+        <div class='activity-div'>
+          <div class='profile-info'>
+            <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/women/82.jpg'>
+            <div class='contact-info'>
+              <p class='comment'>Victoria Chambers commented on YourApp's SEO Tips</p>
+              <p class='time'>4 hours ago</p>
+            </div>
+          </div>
+          <img class='chevron' alt='chevron' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
+          />
+        </div>
+
+        <div class='activity-div'>
+          <div class='profile-info'>
+            <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/men/81.jpg'>
+            <div class='contact-info'>
+              <p class='comment'>Dale Byrd like the post Facebook's Changes for 2016</p>
+              <p class='time'>5 hours ago</p>
+            </div>
+          </div>
+          <img class='chevron' alt='chevron' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
+          />
+        </div>
+
+        <div class='activity-div'>
+          <div class='profile-info'>
+            <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/women/60.jpg'>
+            <div class='contact-info'>
+              <p class='comment'>Dawn Wood commented on Facebook's Changes for 2016</p>
+              <p class='time'>5 hours ago</p>
+            </div>
+          </div>
+          <img class='chevron' alt='chevron' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
+          />
+        </div>
+
+        <div class='activity-div-last'>
+          <div class='profile-info'>
+            <img class='pic' alt='pic' src='https://randomuser.me/api/portraits/men/25.jpg'>
+            <div class='contact-info'>
+              <p class='comment'>Dan Oliver posted YourApp's SEO Tips</p>
+              <p class='time'>1 day ago</p>
+            </div>
+          </div>
+          <img class='chevron' alt='chevron' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTguNjI5IDE1Ljk5N2wtNy4wODMtNy4wODFMMTMuNDYyIDdsOC45OTcgOC45OTdMMTMuNDU3IDI1bC0xLjkxNi0xLjkxNnoiLz48L3N2Zz4='
+          />
+        </div>
+      </div>
+      <!-- End of members flex container -->
+    </div>
+
+    <!-- Message user container form -->
+    <div class='message-settings-flex'>
+      <div class='message-div'>
+        <form id='message-form' autocomplete='off' action='index.html' method='post'>
+
+          <div>
+            <h2 class='message-user'>MESSAGE USER</h2>
+          </div>
+
+          <div class='autocomplete'>
+            <input required type='text' id='search-name' name='user_name' placeholder='Search for User'>
+          </div>
+
+          <textarea id='other' name='user-bio' placeholder='Message for User'></textarea>
+
+          <button class='send' type="submit">SEND</button>
+        </form>
       </div>
 
-      <!-- Message user container form -->
-      <div class='message-settings-flex'>
-        <div class='message-div'>
-          <form id='message-form' autocomplete='off' action='index.html' method='post'>
+      <div class='settings-div' id='settings'>
+        <!-- Settings div -->
 
-            <div>
-              <h2 class='message-user'>MESSAGE USER</h2>
-            </div>
 
-            <div class='autocomplete'>
-              <input required type='text' id='search-name' name='user_name' placeholder='Search for User'>
-            </div>
 
-            <div class='textarea'>
-              <textarea id='other' name='user-bio' placeholder='Message for User'></textarea>
-            </div>
-            <button class='send' type="submit">SEND</button>
-          </form>
-        </div>
-
-        <div class='settings-div' id='settings'>
-          <!-- Settings div -->
-
+        <form id='settings-form' action='index.html' method='post'>
           <h2 class='settings-activity'>SETTINGS</h2>
+          <div class='switch-div'>
+            <h2 class='light'>Send Email Notifications</h2>
+            <label class='switch'>
+              <input id='email-checkbox' type='checkbox'>
+              <span class='slider round'>ON</span>
+              <span class='slider-inner'></span>
+            </label>
+          </div>
 
-          <form id='settings-form' action='index.html' method='post'>
+          <div class='switch-div'>
+            <h2 class='light'>Set Profile to Public</h2>
+            <label class='switch'>
+              <input id='profile-checkbox' type='checkbox'>
+              <span class='slider round'>ON</span>
+            </label>
+          </div>
 
-            <div class='switch-div'>
-              <h2 class='light'>Send Email Notifications</h2>
-              <label class='switch'>
-                <input id='email-checkbox' type='checkbox'>
-                <span class='slider round'>ON</span>
-                <span class='slider-inner'></span>
-              </label>
+          <div class='dropdown-button-div'>
+            <div class='select-timezone'>
+              <select id='timezone' name='user_timezone' class='input-text'>
+                <option disabled selected='selected'>Select Timezone</option>
+                <option value="UTC-11">Samoa Standard Time</option>
+                <option value="UTC-10">Hawaii-Aleutian Standard Time</option>
+                <option value="UTC-9">Alaska Standard Time</option>
+                <option value="UTC-7">Mountain Standard Time</option>
+                <option value="UTC-5">Eastern Standard Time</option>
+                <option value="UTC-4">Atlantic Standard Time</option>
+                <option value="UTC+10">Chamorro Standard Time</option>
+                <option value="UTC+12">Wake Island Time Zone</option>
+                <option value="UTC-8">Pacific Standard Time</option>
+              </select>
             </div>
 
-            <div class='switch-div'>
-              <h2 class='light'>Set Profile to Public</h2>
-              <label class='switch'>
-                <input id='profile-checkbox' type='checkbox'>
-                <span class='slider round'>ON</span>
-              </label>
+            <div class='btn-group'>
+              <button class='save' id='save' type="submit">SAVE</button>
+              <button class='cancel' id='cancel' type="submit">CANCEL</button>
             </div>
-
-            <div class='dropdown-button-div'>
-              <div class='select-timezone'>
-                <select id='timezone' name='user_timezone' class='input-text'>
-                  <option disabled selected='selected'>Select Timezone</option>
-                  <option value="UTC-11">Samoa Standard Time</option>
-                  <option value="UTC-10">Hawaii-Aleutian Standard Time</option>
-                  <option value="UTC-9">Alaska Standard Time</option>
-                  <option value="UTC-7">Mountain Standard Time</option>
-                  <option value="UTC-5">Eastern Standard Time</option>
-                  <option value="UTC-4">Atlantic Standard Time</option>
-                  <option value="UTC+10">Chamorro Standard Time</option>
-                  <option value="UTC+12">Wake Island Time Zone</option>
-                  <option value="UTC-8">Pacific Standard Time</option>
-                </select>
-              </div>
-
-              <div class='btn-group'>
-                <button class='save' id='save' type="submit">SAVE</button>
-                <button class='cancel' id='cancel' type="submit">CANCEL</button>
-              </div>
-            </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
-
     </div>
 
   </div>
