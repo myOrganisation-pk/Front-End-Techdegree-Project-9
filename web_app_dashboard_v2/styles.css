@@ -955,7 +955,8 @@ button.cancel {
     overflow: hidden;
     padding: 5px 10px;
 		max-width: 100%;
-
+		position: relative;
+		z-index: 1;
   }
 	.navigation {
 	  background: #535997;
@@ -966,7 +967,6 @@ button.cancel {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
 	}
 	.nav-bar ul {
     padding-top: 50px;
@@ -975,16 +975,13 @@ button.cancel {
 		flex-direction: column;
 		justify-content: space-around;
     margin-top: 0;
-    z-index: -1;
 	}
 	.nav-bar li {
     list-style-type: none;
-    z-index: -1;
 	}
 	.nav-bar img {
 		height: 30px;
     width: 30px;
-    z-index: -1;
 	}
 	#search-nav {
 		max-width: 230px;
